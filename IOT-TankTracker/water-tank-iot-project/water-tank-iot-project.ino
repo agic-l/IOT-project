@@ -1,4 +1,4 @@
-//definiranje biblioteka koje ću koristiti 
+//korištene biblioteke
 #include <ESP8266WiFi.h>
 #include <Firebase_ESP_Client.h>
 #include "addons/TokenHelper.h"
@@ -81,7 +81,7 @@ void sendDataToFirebase() {
     Serial.println(fbdo.errorReason());
   }
 
-  // Slanje statusa spremnika
+  //statusa rezervoara
   String status = "";
   if (distance > LVL_MIN) {
     status = "Water tank is empty (0%)";
@@ -134,7 +134,7 @@ void loop() {
   digitalWrite(LEDG_PIN, LOW);
   digitalWrite(LEDB_PIN, LOW);
 
-  // Provjera trenutnog statusa spremnika
+  // Provjera trenutnog statusa rezervoara
   String currentStatus = "";
   if (distance >= LVL_MIN) {
     digitalWrite(LEDY_PIN, HIGH);
@@ -154,9 +154,4 @@ void loop() {
       lastStatus = currentStatus;
     }
   }
-  
-  // Provjera slobodne memorije svake 5 sekundi
-  Serial.print("Free heap memory: ");
-  Serial.println(ESP.getFreeHeap());
-  delay(5000);
 }
