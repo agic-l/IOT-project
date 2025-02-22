@@ -5,12 +5,12 @@
 #include "addons/RTDBHelper.h"
 
 //podaci za pristup internetu i povezivanje na mrežu
-#define WIFI_SSID "93cae6"
-#define WIFI_PASSWORD "280729486"
+#define WIFI_SSID "YourWifiSSID"
+#define WIFI_PASSWORD "YourWifiPassword"
 
 //povezivanje na firebase
-#define API_KEY "AIzaSyBbM0alNX8Vtl8qo9rA4UlR1VV5mBKkVrE"
-#define DATABASE_URL "https://iot-water-tank-level-project-default-rtdb.europe-west1.firebasedatabase.app/"
+#define API_KEY "YourApiKey"
+#define DATABASE_URL "YourDatabaseUrl"
 
 FirebaseData fbdo;
 FirebaseAuth auth;
